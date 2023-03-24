@@ -1,3 +1,13 @@
+let game = {
+    deck: {},
+    cardsUp: 0,
+    card1: 0,
+    card2: 0,
+};
+let card1 = 0;
+let card2 = 0;
+
+
 function createDeck(numPairs){
     let cardArr = [];
     //let symbols = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -25,12 +35,56 @@ function shuffle(deck){
     return shuffledDeck
 }
 
+function putCardsBackDown(){
+    card1.firstChild.style.visibility = 'hidden';
+    card2.firstChild.style.visibility = 'hidden';
+    card1.addEventListener('click', flipCard);
+    //game.card1 = 0;
+    //game.card2 = 0;
+    card1 = 0;
+    card2 = 0;
+}
+
+function flipCard(obj){
+    console.log(`card1 = ${card1}`);
+    console.log(`card2 = ${card2}`);
+    //console.log('G')
+    //console.log(obj.target.firstChild.style.visibility);
+    if(obj.target.firstChild.style.visibility === 'hidden'){
+        obj.target.firstChild.style.visibility = 'visible';
+    }
+    if(card1 === 0){
+        //game.card1 = obj.target;
+        card1 = obj.target;
+        card1.removeEventListener('click', flipCard);
+    }else{
+        //game.card2 = obj.target;
+        card2 = obj.target;
+        if(card1.id != card2.id){
+            setTimeout(putCardsBackDown, 500)
+        }else{
+            card2.removeEventListener('click', flipCard);
+            card1 = 0;
+            card2 = 0;
+        }
+
+
+
+
+
+        //game.card1 = 0;
+        //game.card2 = 0;
+    }
+}
+
 function layCard(card){
     let cardElement = document.createElement('div');
     cardElement.innerHTML = `<p>${card.symbol}</p>`;
     cardElement.classList.add('card');
     cardElement.style.color = card.color;
     cardElement.id = card.id;
+    cardElement.addEventListener('click', flipCard);
+    cardElement.firstChild.style.visibility = 'hidden';
 
 
     document.getElementById('card-holder').appendChild(cardElement);
@@ -56,8 +110,16 @@ testCard.classList.add('card');
 document.getElementById('card-holder').appendChild(testCard);
 */
 
-let deck = shuffle(createDeck(5));
-deck.forEach(card => layCard(card));
+game.deck = shuffle(createDeck(2));
+game.deck.forEach(card => layCard(card));
+
+
+
+
+
+
+
+
 
 
 
