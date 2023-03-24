@@ -46,10 +46,6 @@ function putCardsBackDown(){
 }
 
 function flipCard(obj){
-    console.log(`card1 = ${card1}`);
-    console.log(`card2 = ${card2}`);
-    //console.log('G')
-    //console.log(obj.target.firstChild.style.visibility);
     if(obj.target.firstChild.style.visibility === 'hidden'){
         obj.target.firstChild.style.visibility = 'visible';
     }
@@ -72,8 +68,6 @@ function flipCard(obj){
 
 
 
-        //game.card1 = 0;
-        //game.card2 = 0;
     }
 }
 
@@ -110,8 +104,9 @@ testCard.classList.add('card');
 document.getElementById('card-holder').appendChild(testCard);
 */
 
-game.deck = shuffle(createDeck(2));
+game.deck = shuffle(createDeck(6));
 game.deck.forEach(card => layCard(card));
+
 
 
 
