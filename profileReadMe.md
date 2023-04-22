@@ -1,0 +1,1 @@
+Credit to @gilly3 at https://github.com/gilly3/lowFloat for floating image bottom right.
