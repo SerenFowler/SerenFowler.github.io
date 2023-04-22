@@ -1,0 +1,62 @@
+:root{
+    --background: #C0F0F7;
+    --primary: #9BE8F2;
+    --secondary: #68DCEB;
+    --accent: #FFF;
+    --text: #45F564;
+    /*--header: #052327;*/
+    --header: #093d44;
+
+}
+
+[data-theme="dark"]{
+    --background: #093d44;
+    --primary: #106B77;
+    --secondary: #158F9F;
+    --accent: #056716;
+    --text: #FFF;
+    --header: #C0F0F7;
+
+}
+
+body{
+    background-color: var(--background);
+    color: text;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--header);
+}
+    
+
+section{
+    display: block;
+    background-color: var(--primary)
+}
+
+.imageTextWrap img{
+    height: 200px;
+    width: 300px;
+}
+
+.skillIcon{
+    height: 200px
+}
+
+#aboutMeSpacer{
+    height: 0;
+    float: right;
+}
+
+#canoe{
+    float: left;
+    margin: 0px 10px 10px 0px;
+}
+
+#bow{
+    float: right;
+    margin: 10px 0px 0px 10px;
+    clear: right;
+}
+
+
