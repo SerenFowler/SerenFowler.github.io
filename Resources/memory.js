@@ -1,9 +1,4 @@
-let game = {
-    deck: {},
-    cardsUp: 0,
-    card1: 0,
-    card2: 0,
-};
+let deck = {};
 let card1 = 0;
 let card2 = 0;
 
@@ -104,8 +99,8 @@ testCard.classList.add('card');
 document.getElementById('card-holder').appendChild(testCard);
 */
 
-game.deck = shuffle(createDeck(6));
-game.deck.forEach(card => layCard(card));
+deck = shuffle(createDeck(6));
+deck.forEach(card => layCard(card));
 
 
 
