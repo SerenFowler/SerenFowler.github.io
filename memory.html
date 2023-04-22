@@ -4,7 +4,25 @@
     <script src="./Resources/memory.js" defer></script>
 </head>
 <body id="body">
-    <p>Memory Game</p>
-    <div id="card-holder">
+    <form id="game-start-buttons">
+        <section class="button">
+            <label for="num-pairs">Pairs of Cards:</label>
+            <input type="number" name="num-pairs" id="num-pairs" value="6" required>
+        </section>
+        <section class="button">
+            <span>Card Size:</span>
+            <input type="radio" name="card-size" id="small" value="small">
+            <label for="small">Small</label>
+
+            <input type="radio" name="card-size" is="large" value="large" checked>
+            <label for="large">Large</label>
+        </section>
+        <section class="button">
+            <input type="submit" value="Start Game" id="start-button">
+        </section>
+    </form>
+
+
+    <div id="card-holder" role="presentation">
     </div>
 </body>
