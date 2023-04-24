@@ -34,8 +34,9 @@ header{
     
 
 section{
+    background-color: var(--primary);
+    border-radius: 20px;
     display: block;
-    background-color: var(--primary)
 }
 
 .imageTextWrap img{
