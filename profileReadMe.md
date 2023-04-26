@@ -1,1 +1,2 @@
 Credit to @gilly3 at https://github.com/gilly3/lowFloat for floating image bottom right.
+Credit to Ananya Neogi at https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8 fot day/night switch.

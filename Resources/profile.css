@@ -37,15 +37,75 @@ section{
     background-color: var(--primary);
     border-radius: 20px;
     display: block;
+    min-height: 250px;
+    padding: 10px;
+    margin: 10px;
 }
+
+p, em{
+    color: var(--text);
+}
+
+/*day-night-switch*/
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+  
+  }
+
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: var(--secondary);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: var(--header);
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+/* blocks*/
+
+/*AboutMe*/
 
 .imageTextWrap img{
     height: 200px;
     width: 300px;
-}
-
-.skillIcon{
-    height: 200px
 }
 
 #aboutMeSpacer{
@@ -64,4 +124,7 @@ section{
     clear: right;
 }
 
-
+/*skills*/
+.skillIcon{
+    height: 200px
+}
