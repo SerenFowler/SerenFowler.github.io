@@ -25,8 +25,6 @@
 
 *{
     color: var(--text);
-    padding: 0px;
-    margin: opx;
     border: 1px solid red;
 }
 
@@ -185,4 +183,9 @@ img{
 /*skills*/
 .skillIcon{
     height: 12.5rem
+}
+@media only screen and (max-width: 750px){
+  .skillIcon{
+    height: 3.125rem
+}
 }
