@@ -17,11 +17,14 @@ onload = onresize = function() {
 const dayNghtSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
 function switchTheme(e) {
+    let label = document.getElementById('DayNightLabel');
     if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
+        label.innerHTML = 'Disable Dark Mode!';
     }
     else {
         document.documentElement.setAttribute('data-theme', 'light');
+        label.innerHTML = 'Enable Dark Mode!';
     }    
 }
 
